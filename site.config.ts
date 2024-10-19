@@ -1,43 +1,47 @@
 import { Envelope, Phone, Question } from "@phosphor-icons/react/dist/ssr";
+import type { Routes, Links, ContactSection, StatSection, FAQ } from "@types";
 
-export const links = {
+export const routes: Routes = {
     home: "/",
+};
+
+export const links: Links = {
     zenithxtech: "https://zenithx.tech",
 };
 
-export const socials = [
-    { name: "Facebook", href: "#" },
-    { name: "X (Twitter)", href: "#" },
-    { name: "LinkedIn", href: "#" },
-];
+export const socials: Links = {
+    Facebook: "#",
+    "X (Twitter)": "#",
+    LinkedIn: "#",
+};
 
-export const contacts = {
+export const contactSection: ContactSection = {
     title: "Let's Bring Your Vision to Life",
     description:
         "Ready to transform your ideas into powerful web applications? Fill out our project form and let's get started on your digital journey.",
     contacts: [
         {
             icon: Envelope,
-            title: "Contact us by email",
+            label: "Contact us by email",
             value: "zenithxtech@gmail.com",
-            link: "mailto:zenithxtech@gmail.com",
+            href: "mailto:zenithxtech@gmail.com",
         },
         {
             icon: Phone,
-            title: "Give us a call",
+            label: "Give us a call",
             value: "+8801688784512",
-            link: "tel:+8801688784512",
+            href: "tel:+8801688784512",
         },
         {
             icon: Question,
-            title: "Visit our FAQ",
+            label: "Visit our FAQ",
             value: "Get quick answers",
-            link: "/#faq-section",
+            href: "/#faq-section",
         },
     ],
 };
 
-export const stats = {
+export const statSection: StatSection = {
     title: "Excellence in Web Development",
     description:
         "We create cutting-edge web applications that drive business growth with high-quality, efficient solutions.",
@@ -48,24 +52,25 @@ export const stats = {
     },
     stats: [
         {
-            value: "4+",
             label: "Countries Served",
+            value: "4+",
         },
         {
-            value: "12+",
             label: "Satisfied Clients",
+            value: "12+",
         },
         {
-            value: "100%",
             label: "Client Retention",
+            value: "100%",
         },
         {
-            value: "24/7",
             label: "Support Available",
+            value: "24/7",
         },
     ],
 };
-export const faqs = [
+
+export const faqs: FAQ[] = [
     {
         question: "What types of web applications do you specialize in?",
         answer: "We specialize in e-commerce platforms, CMS, CRM tools, and custom enterprise solutions, covering both front-end and back-end development.",

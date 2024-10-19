@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { links } from "@config";
 import { cn } from "@/lib/utils";
 import { TrendUp } from "@phosphor-icons/react/dist/ssr";
+import { routes, links } from "@config";
 
 interface Props {
     className?: string;
@@ -16,19 +16,19 @@ export default function Header({ className }: Props) {
                     className
                 )}>
                 <Link
-                    href={links.home}
+                    href={routes.home}
                     className="rounded-xl text-xl inline-block font-bold focus:outline-none focus:opacity-80 hover:opacity-80 transition">
                     zenith ✕ bytes
                 </Link>
 
-                <Link
+                <a
                     href={links.zenithxtech}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hidden sm:flex items-center gap-1 py-2 px-4 text-sm font-medium rounded-lg bg-card/60 focus:outline-none hover:text-primary transition text-nowrap">
                     zenith ✕ tech
                     <TrendUp />
-                </Link>
+                </a>
             </nav>
         </header>
     );

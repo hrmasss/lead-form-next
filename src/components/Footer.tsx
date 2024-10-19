@@ -21,17 +21,20 @@ export default function Footer({ className }: Props) {
                 </div>
 
                 <ul className="flex flex-wrap items-center">
-                    {socials.map((social, index) => (
+                    {Object.entries(socials).map(([name, href], index) => (
                         <li
+                            key={name}
                             className={`inline-block relative pe-4 text-sm ${
-                                index !== socials.length - 1
+                                index !== Object.entries(socials).length - 1
                                     ? "before:absolute before:top-1/2 before:end-1.5 before:-translate-y-1/2 before:size-[3px] before:rounded-full before:bg-foreground/40"
                                     : "last:pe-0 last-of-type:before:hidden"
                             }`}>
                             <a
                                 className="text-sm text-foreground/60 underline hover:text-foreground hover:decoration-2 hover:decoration-primary focus:outline-none focus:decoration-2 decoration-foreground/60"
-                                href={social.href}>
-                                {social.name}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                href={href}>
+                                {name}
                             </a>
                         </li>
                     ))}
