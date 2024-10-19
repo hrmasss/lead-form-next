@@ -16,7 +16,7 @@ export default function FaqSection({ className }: Props) {
 
             <div className="grid sm:grid-cols-2 gap-6 md:gap-12">
                 {faqs.map((faq) => (
-                    <div>
+                    <div key={faq.question}>
                         <h3 className="text-lg font-semibold">
                             {faq.question}
                         </h3>

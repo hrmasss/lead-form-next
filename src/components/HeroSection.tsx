@@ -21,20 +21,22 @@ export default function HeroSection({ className }: Props) {
                     </p>
 
                     <div className="space-y-6">
-                        {contactSection.contacts.map((option) => (
-                            <div className="flex gap-4">
-                                <option.icon
+                        {contactSection.contacts.map((contact) => (
+                            <div
+                                key={contact.label}
+                                className="flex gap-4">
+                                <contact.icon
                                     weight="duotone"
                                     className="size-6 mt-1.5 text-primary"
                                 />
                                 <div className="grow">
                                     <h3 className="font-semibold">
-                                        {option.label}
+                                        {contact.label}
                                     </h3>
                                     <a
                                         className="group flex items-center gap-2 text-sm font-medium text-foreground/60 hover:text-primary focus:outline-none focus:text-primary"
-                                        href={option.href}>
-                                        {option.value}
+                                        href={contact.href}>
+                                        {contact.value}
                                         <TrendUp className="group-hover:translate-x-1 transition duration-300 size-4" />
                                     </a>
                                 </div>

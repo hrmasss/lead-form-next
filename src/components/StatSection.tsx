@@ -46,7 +46,9 @@ export default function StatSection({ className }: Props) {
                     <div className="space-y-6 sm:space-y-8">
                         <ul className="grid grid-cols-2 divide-y divide-x divide-border overflow-hidden">
                             {statSection.stats.map((stat) => (
-                                <li className="flex flex-col items-center -m-0.5 p-4 sm:p-8">
+                                <li
+                                    key={stat.label}
+                                    className="flex flex-col items-center -m-0.5 p-4 sm:p-8">
                                     <div className="flex items-end gap-x-2 text-3xl sm:text-5xl font-bold mb-2">
                                         {stat.value}
                                     </div>
